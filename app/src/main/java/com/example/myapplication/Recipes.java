@@ -15,4 +15,27 @@ public class Recipes {
         Recipe = recipe;
         Thumbnail = thumbnail;
     }
+
+
+    public String getRecipeName() {
+
+        return RecipeName;
+    }
+
+    public String getRecipeIngredient() {
+
+        return RecipeIngredient;
+    }
+
+    public String getRecipeMethodTitle() {
+        return RecipeMethodTitle;
+    }
+
+    public String getRecipe() {
+        return Recipe;
+    }
+
+    public int getThumbnail() {
+        return Thumbnail;
+    }
 }
