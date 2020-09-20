@@ -35,7 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
+    public void onBindViewHolder(@NonNull MyHolder myHolder, final int i) {
         myHolder.recipeTitle.setText(mData.get(i).getRecipeName());
 
         myHolder.img_recipe_thumbnail.setImageResource(mData.get(i).getThumbnail());
@@ -44,6 +44,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
                 Intent intent  = new Intent(mContext,RecipeActivity.class);
+
+                intent.putExtra("Name",mData.get(i).getRecipeName());
+                intent.putExtra( "Ingredients", mData.get(i).getRecipeIngredient());
+                intent.putExtra("MethodTitle",mData.get(i).getRecipeMethodTitle());
+                intent.putExtra("Recipe", mData.get(i).getRecipe());
+
+                mContext.startActivity(intent);
             }
         });
 
@@ -51,7 +58,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mData.size();
     }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     public class MyHolder extends RecyclerView.ViewHolder {
 
