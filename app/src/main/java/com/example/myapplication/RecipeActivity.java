@@ -26,5 +26,13 @@ public class RecipeActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String Title = intent.getExtras().getString( "RecipeName");
+        String ingredients = intent.getExtras().getString( "recipeIngredients");
+        String MethodTitle = intent.getExtras().getString( "RecipeMethodTitle");
+        String Recipe = intent.getExtras().getString( "Recipe");
+
+        mRecipeName.setText(Title);
+        mRecipeIngredients.setText(ingredients);
+        mRecipeMethodTitle.setText(MethodTitle);
+        mRecipe.setText(Recipe);
     }
 }
