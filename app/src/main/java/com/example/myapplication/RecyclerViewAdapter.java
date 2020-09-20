@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -24,12 +26,26 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @NonNull
     @Override
-    public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+    public MyHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View view;
+
+        LayoutInflater mInflater = LayoutInflater.from(mContext);
+        view = mInflater.inflate(R.layout.cardview_recipe,viewGroup , false);
+        return new MyHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
+        myHolder.recipeTitle.setText(mData.get(i).getRecipeName());
+
+        myHolder.img_recipe_thumbnail.setImageResource(mData.get(i).getThumbnail());
+
+        myHolder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(mContext,RecipeActivity.class);
+            }
+        });
 
     }
 
