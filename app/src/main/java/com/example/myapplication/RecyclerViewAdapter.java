@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -9,7 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyHolder> {
+    private Context mContext;
+    private List<Recipes> mData;
+
+    public RecyclerViewAdapter(Context mContext, List<Recipes> mData)  {
+        this.mContext = mContext;
+        this.mData = mData;
+    }
 
 
     @NonNull
