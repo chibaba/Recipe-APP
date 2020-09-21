@@ -50,7 +50,35 @@ public class MainActivity extends AppCompatActivity {
                 "1 tablespoon Nigerian curry powder\n" +
                 "Salt (to taste)", "Method", "If you do not have shaki and ponmo, use any part of beef available to you.\n",R.drawable.beefstew));
 
-        recipes1
+        recipes1.add(new Recipes("Habanero", "14 chicken drumettes\n" +
+                "1 small mango or one cheek of a big mango\n" +
+                "1 teaspoon ketchup\n" +
+                "2 teaspoons onion powder\n" +
+                "1 teaspoon thyme\n" +
+                "½ teaspoon black pepper\n" +
+                "2 pinches of salt\n" +
+                "1 habanero pepper\n" +
+                "3 small seasoning cubes (chicken flavour)", "Method", "You can add any other fresh seasoning of your choice: onions, garlic etc but grind them very well so the pieces do not stand out.\n",R.drawable.sauce));
+
+        recipes1.add(new Recipes("Ofe Onugbu", "Washed and squeezed bitterleaf – A handful\n" +
+                "10 small corms Cocoyam\n" +
+                "3 cooking spoons Red Palm Oil\n" +
+                "Assorted Beef: Includes best cut, shaki (cow tripe)\n" +
+                "Assorted Fish: Dry Fish and Stock Fish\n" +
+                "Pepper, salt and ground crayfish (to taste)\n" +
+                "3 stock cubes\n" +
+                "1 teaspoon Ogiri Igbo (traditional seasoning)", "Method", "Ogiri Igbo is optional, it gives Bitterleaf Soup a traditional taste.\n", R.drawable.mixedveggiesauce));
+        recipes1.add(new Recipes("Tin Tomato Stew", "1,600g tinned tomato puree\n" +
+                "400g (14oz) tinned tomato paste\n" +
+                "Sunflower oil or vegetable oil: a generous quantity (see the video below)\n" +
+                "1.2kg hard chicken (hen)\n" +
+                "1kg beef\n" +
+                "2 onions\n" +
+                "1 tablespoon thyme\n" +
+                "2 tablespoons Nigerian curry powder\n" +
+                "Habanero or Cayenne pepper (to taste)\n" +
+                "Salt (to taste)", "Method", "Serve with boiled white rice, boiled yam etc.\n", R.drawable.pepper ));
+
 
 
         myrecyclerView = (RecyclerView)findViewById(R.id.recyclerView_id);
